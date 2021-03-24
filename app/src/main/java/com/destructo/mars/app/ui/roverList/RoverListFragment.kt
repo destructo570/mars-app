@@ -18,18 +18,12 @@ import com.destructo.mars.app.util.ListItemVerticalDecor
 class RoverListFragment : Fragment() {
 
     private var _binding: FragmentRoverListBinding? = null
-
     private val binding get() = _binding!!
     private lateinit var roverAdapter: RoverListAdapter
     private lateinit var roverRecycler: RecyclerView
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
 
         _binding = FragmentRoverListBinding.inflate(inflater, container, false)
 
