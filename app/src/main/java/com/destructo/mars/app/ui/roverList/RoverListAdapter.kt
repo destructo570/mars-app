@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.destructo.mars.app.R
 import com.destructo.mars.app.data.model.Rover
 
-class RoverListAdapter(val clickListener: (Rover) -> Unit): ListAdapter<Rover, RoverListAdapter.ViewHolder>(RoverDiffUtilCallback()) {
+class RoverListAdapter(private val clickListener: (Rover) -> Unit): ListAdapter<Rover, RoverListAdapter.ViewHolder>(RoverDiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
