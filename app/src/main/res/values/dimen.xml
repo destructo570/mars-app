@@ -16,9 +16,14 @@
     <dimen name="text_size_b2">14sp</dimen>
     <dimen name="text_size_b3">12sp</dimen>
 
-<!-- Rover Card -->
+    <!-- Rover Card -->
     <dimen name="rover_card_height">250dp</dimen>
     <dimen name="rover_name_height">56dp</dimen>
+
+    <!-- Rover Details -->
+    <dimen name="rover_detail_button_height">64dp</dimen>
+
+    <dimen name="no_elevation">0dp</dimen>
 
 
 </resources>

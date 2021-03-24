@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="color_primary">#ffffff</color>
-    <color name="color_primary_dark">#f2f2f2</color>
+    <color name="color_primary_dark">#ffffff</color>
+    <color name="color_accent">#ef5350</color>
+    <color name="color_accent_night">#ef5350</color>
     <color name="color_primary_night">#000000</color>
     <color name="color_primary_night_dark">#000000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="text_color_primary">#000000</color>
+    <color name="text_color_onPrimary">#FFFFFF</color>
+    <color name="text_color_primary_night">#FFFFFF</color>
+    <color name="text_color_onPrimary_night">#000000</color>
 
     <color name="transparent_black">#BF000000</color>
 </resources>

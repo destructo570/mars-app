@@ -10,4 +10,13 @@
         android:name="com.destructo.mars.app.ui.roverList.RoverListFragment"
         android:label="fragment_rover_list"
         tools:layout="@layout/fragment_rover_list" />
+    <fragment
+        android:id="@+id/roverDetailFragment"
+        android:name="com.destructo.mars.app.ui.roverDetail.RoverDetailFragment"
+        android:label="fragment_rover_detail"
+        tools:layout="@layout/fragment_rover_detail" >
+        <argument
+            android:name="arg_rover"
+            app:argType="com.destructo.mars.app.data.model.Rover" />
+    </fragment>
 </navigation>

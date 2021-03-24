@@ -3,4 +3,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="rover_image">Rover Image</string>
+    <string name="mission_name">Mission Name:</string>
+    <string name="rover_name">Rover Name:</string>
+    <string name="launched_on">Launched On:</string>
+    <string name="landed_on">Landed On:</string>
+    <string name="main_job">Main Job:</string>
+    <string name="see_images">See Images</string>
+
+    <!--Fake Data-->
+    <string name="dummy_mission_name">Mars 2020</string>
+    <string name="dummy_rover_name">Perseverance</string>
+    <string name="dummy_launched_on">July 30, 2020</string>
+    <string name="dummy_landed_on">Feb, 18, 2021</string>
+    <string name="dummy_main_job">Seek signs of ancient life and collect samples of rock and regolith (broken rock and soil) for possible return to Earth.</string>
+
 </resources>

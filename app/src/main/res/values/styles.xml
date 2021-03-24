@@ -5,4 +5,35 @@
         <item name="android:textSize">@dimen/text_size_h1</item>
         <item name="fontFamily">@font/mono_bold</item>
     </style>
+
+    <style name="TextAppearance.Mars.H3" parent="@style/TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_size_b1</item>
+        <item name="fontFamily">@font/mono_bold</item>
+        <item name="android:textColor">?attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Mars.B1" parent="@style/TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_size_b1</item>
+        <item name="fontFamily">@font/mono_light</item>
+        <item name="android:textColor">?attr/textColorPrimary</item>
+    </style>
+
+    <style name="ToolbarStyle">
+        <item name="background">?attr/colorPrimary</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Mars.H1</item>
+    </style>
+
+    <style name="ToolbarStyleWithBackIcon" parent="ToolbarStyle">
+        <item name="navigationIcon">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="MarsButton">
+        <item name="fontFamily">@font/mono_bold</item>
+        <item name="backgroundTint">?attr/colorAccentSecondary</item>
+        <item name="android:textColor">?attr/textColorOnPrimary</item>
+        <item name="elevation">0dp</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Mars.H3</item>
+    </style>
 </resources>

@@ -1,3 +1,4 @@
 package com.destructo.mars.app.util
 
 const val LIST_ITEM_SPACING = 28
+const val ARG_ROVER = "arg_rover"

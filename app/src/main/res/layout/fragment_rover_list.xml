@@ -15,8 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:title="@string/app_name"
-        android:background="?attr/colorPrimary"
-        app:titleTextAppearance="@style/TextAppearance.Mars.H1"
+        style="@style/ToolbarStyle"
         />
 
     <androidx.recyclerview.widget.RecyclerView

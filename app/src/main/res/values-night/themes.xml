@@ -5,10 +5,9 @@
         <item name="colorPrimary">@color/color_primary_night</item>
         <item name="colorPrimaryVariant">@color/color_primary_night_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorAccentSecondary">@color/color_accent_night</item>
+        <item name="textColorPrimary">@color/text_color_primary_night</item>
+        <item name="textColorOnPrimary">@color/text_color_onPrimary_night</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="android:windowBackground">?attr/colorPrimary</item>
