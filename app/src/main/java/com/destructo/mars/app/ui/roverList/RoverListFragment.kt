@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -41,8 +42,10 @@ class RoverListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        roverAdapter = RoverListAdapter()
-        roverAdapter.data = RoversList.rovers
+        roverAdapter = RoverListAdapter {
+            Toast.makeText(context, it.name, Toast.LENGTH_SHORT).show()
+        }
+        roverAdapter.submitList(RoversList.rovers)
         roverRecycler.adapter = roverAdapter
     }
 

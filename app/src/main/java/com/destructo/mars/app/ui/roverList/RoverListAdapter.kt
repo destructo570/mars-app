@@ -1,36 +1,29 @@
 package com.destructo.mars.app.ui.roverList
 
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.destructo.mars.app.R
 import com.destructo.mars.app.data.model.Rover
 
-class RoverListAdapter: RecyclerView.Adapter<RoverListAdapter.ViewHolder>() {
-
-    var data = listOf<Rover>()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+class RoverListAdapter(val clickListener: (Rover) -> Unit): ListAdapter<Rover, RoverListAdapter.ViewHolder>(RoverDiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = data[position]
-        holder.bind(item)
+        val item = getItem(position)
+        holder.bind(item, clickListener)
     }
 
-    override fun getItemCount(): Int {
-        return data.size
-    }
-
-    class ViewHolder private constructor(itemView: View): RecyclerView.ViewHolder(itemView){
+    class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
         private val roverName: TextView = itemView.findViewById(R.id.rover_name)
         private val roverImage: ImageView = itemView.findViewById(R.id.rover_image)
 
@@ -42,13 +35,22 @@ class RoverListAdapter: RecyclerView.Adapter<RoverListAdapter.ViewHolder>() {
             }
         }
 
-        fun bind(item: Rover) {
+        fun bind(item: Rover, clickListener: (Rover) -> Unit) {
             roverName.text = item.name
             roverImage.setImageResource(item.image)
+            itemView.setOnClickListener { clickListener(item) }
         }
-
     }
 
+}
 
+class RoverDiffUtilCallback: DiffUtil.ItemCallback<Rover>(){
+    override fun areItemsTheSame(oldItem: Rover, newItem: Rover): Boolean {
+        return oldItem.name == newItem.name
+    }
+
+    override fun areContentsTheSame(oldItem: Rover, newItem: Rover): Boolean {
+        return oldItem == newItem
+    }
 
 }
