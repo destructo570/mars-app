@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_micro">4dp</dimen>
+
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_micro">4dp</dimen>
+
+    <dimen name="text_size_h1">22sp</dimen>
+    <dimen name="text_size_h2">20sp</dimen>
+    <dimen name="text_size_h3">18sp</dimen>
+    <dimen name="text_size_b1">16sp</dimen>
+    <dimen name="text_size_b2">14sp</dimen>
+    <dimen name="text_size_b3">12sp</dimen>
+
+<!-- Rover Card -->
+    <dimen name="rover_card_height">250dp</dimen>
+    <dimen name="rover_name_height">56dp</dimen>
+
+
+</resources>

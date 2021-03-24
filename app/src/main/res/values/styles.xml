@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Mars.H1" parent="@style/TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_size_h1</item>
+        <item name="fontFamily">@font/mono_bold</item>
+    </style>
+</resources>
