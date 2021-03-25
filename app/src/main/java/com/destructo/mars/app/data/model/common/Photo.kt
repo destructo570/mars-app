@@ -1,10 +1,11 @@
-package com.destructo.mars.app.data.model.latestPhoto
+package com.destructo.mars.app.data.model.common
 
 
+import com.destructo.mars.app.data.model.common.Camera
 import com.destructo.mars.app.data.model.common.Rover
 import com.squareup.moshi.Json
 
-data class LatestPhoto(
+data class Photo(
     @Json(name = "camera")
     val camera: Camera?=null,
     @Json(name = "earth_date")

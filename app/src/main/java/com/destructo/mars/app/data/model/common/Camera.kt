@@ -1,4 +1,4 @@
-package com.destructo.mars.app.data.model.latestPhoto
+package com.destructo.mars.app.data.model.common
 
 
 import com.squareup.moshi.Json

@@ -1,7 +1,6 @@
 package com.destructo.mars.app.ui.marsImageList
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,8 +13,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.destructo.mars.app.R
-import com.destructo.mars.app.data.datasource.Resource
 import com.destructo.mars.app.data.datasource.Status
 import com.destructo.mars.app.databinding.FragmentMarsImageBinding
 import com.destructo.mars.app.util.GridSpacingItemDeco
@@ -66,11 +63,11 @@ class MarsImageFragment : Fragment() {
                 }
                 Status.SUCCESS ->{
                     progressbar.visibility = View.GONE
-                    marsImageAdapter.submitList(resource.data?.latestPhotos)
+                    marsImageAdapter.submitList(resource.data?.photos)
                 }
                 Status.ERROR ->{
                     progressbar.visibility = View.GONE
-                    Toast.makeText(context, "Error: ${resource.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "${resource.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }

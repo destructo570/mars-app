@@ -6,12 +6,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.destructo.mars.app.data.model.latestPhoto.LatestPhoto
+import com.destructo.mars.app.data.model.common.Photo
 import com.destructo.mars.app.databinding.ListItemMarsImageBinding
 
 class MarsImageAdapter (
-    private val latestPhotoListener: (LatestPhoto) -> Unit):
-    ListAdapter<LatestPhoto, MarsImageAdapter.ViewHolder>(LatestPhotoDiffCallback()) {
+    private val latestPhotoListener: (Photo) -> Unit):
+    ListAdapter<Photo, MarsImageAdapter.ViewHolder>(LatestPhotoDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
@@ -28,7 +28,7 @@ class MarsImageAdapter (
         private val binding: ListItemMarsImageBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(latestPhoto: LatestPhoto, latestPhotoListener: (LatestPhoto) -> Unit) {
+        fun bind(latestPhoto: Photo, latestPhotoListener: (Photo) -> Unit) {
             binding.apply {
                 marsImage
                     .load(latestPhoto.imgSrc) {
@@ -57,12 +57,12 @@ class MarsImageAdapter (
 
 }
 
-class LatestPhotoDiffCallback : DiffUtil.ItemCallback<LatestPhoto>() {
-    override fun areItemsTheSame(oldItem: LatestPhoto, newItem: LatestPhoto): Boolean {
+class LatestPhotoDiffCallback : DiffUtil.ItemCallback<Photo>() {
+    override fun areItemsTheSame(oldItem: Photo, newItem: Photo): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: LatestPhoto, newItem: LatestPhoto): Boolean {
+    override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
         return oldItem == newItem
     }
 
