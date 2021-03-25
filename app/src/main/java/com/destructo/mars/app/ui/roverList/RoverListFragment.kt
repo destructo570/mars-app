@@ -53,6 +53,7 @@ class RoverListFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        roverRecycler.adapter = null
         _binding = null
     }
 
