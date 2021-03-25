@@ -46,6 +46,7 @@ class RoverDetailFragment : Fragment() {
     }
 
     private fun bindDataToViews() {
+        binding.roverDetailImage.setImageResource(args.argRover.image)
         binding.roverDetailName.text = args.argRover.name
         binding.roverDetailLandedOn.text = args.argRover.landedOn
         binding.roverDetailLaunchedOn.text = args.argRover.launchedOn
