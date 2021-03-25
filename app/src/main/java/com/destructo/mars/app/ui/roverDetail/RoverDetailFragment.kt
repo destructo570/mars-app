@@ -20,10 +20,6 @@ class RoverDetailFragment : Fragment() {
     private lateinit var toolbar: Toolbar
     private val args: RoverDetailFragmentArgs by navArgs()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +31,20 @@ class RoverDetailFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setupToolbar()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun setupToolbar() {
+        toolbar.setNavigationOnClickListener { findNavController().navigateUp() }
+        toolbar.title = args.argRover.name
+    }
+
     private fun bindDataToViews() {
         binding.roverDetailName.text = args.argRover.name
         binding.roverDetailLandedOn.text = args.argRover.landedOn
@@ -43,17 +53,4 @@ class RoverDetailFragment : Fragment() {
         binding.missionName.text = args.argRover.missionName
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setupToolbar()
-    }
-
-    private fun setupToolbar() {
-        toolbar.setNavigationOnClickListener { findNavController().navigateUp() }
-        toolbar.title = args.argRover.name
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
