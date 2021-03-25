@@ -3,12 +3,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="rover_image">Rover Image</string>
+    <string name="mars_image">Mars Image</string>
     <string name="mission_name">Mission Name:</string>
     <string name="rover_name">Rover Name:</string>
     <string name="launched_on">Launched On:</string>
     <string name="landed_on">Landed On:</string>
     <string name="main_job">Main Job:</string>
     <string name="see_images">See Images</string>
+    <string name="images">Images</string>
 
     <!--Fake Data-->
     <string name="dummy_mission_name">Mars 2020</string>

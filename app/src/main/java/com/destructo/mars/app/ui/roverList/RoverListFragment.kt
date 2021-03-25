@@ -5,15 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.destructo.mars.app.R
 import com.destructo.mars.app.data.datasource.RoversList
-import com.destructo.mars.app.data.model.Rover
+import com.destructo.mars.app.data.model.common.Rover
 import com.destructo.mars.app.databinding.FragmentRoverListBinding
 import com.destructo.mars.app.util.ARG_ROVER
 import com.destructo.mars.app.util.LIST_ITEM_SPACING

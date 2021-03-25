@@ -17,6 +17,15 @@
         tools:layout="@layout/fragment_rover_detail" >
         <argument
             android:name="arg_rover"
-            app:argType="com.destructo.mars.app.data.model.Rover" />
+            app:argType="com.destructo.mars.app.data.model.common.Rover" />
+    </fragment>
+    <fragment
+        android:id="@+id/marsImageFragment"
+        android:name="com.destructo.mars.app.ui.marsImageList.MarsImageFragment"
+        android:label="fragment_mars_image"
+        tools:layout="@layout/fragment_mars_image" >
+        <argument
+            android:name="rover_name"
+            app:argType="string" />
     </fragment>
 </navigation>

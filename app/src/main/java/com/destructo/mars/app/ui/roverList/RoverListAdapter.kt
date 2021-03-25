@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.destructo.mars.app.R
-import com.destructo.mars.app.data.model.Rover
+import com.destructo.mars.app.data.model.common.Rover
 
 class RoverListAdapter(private val clickListener: (Rover) -> Unit): ListAdapter<Rover, RoverListAdapter.ViewHolder>(RoverDiffUtilCallback()) {
 
@@ -36,7 +36,7 @@ class RoverListAdapter(private val clickListener: (Rover) -> Unit): ListAdapter<
 
         fun bind(item: Rover, clickListener: (Rover) -> Unit) {
             roverName.text = item.name
-            roverImage.setImageResource(item.image)
+            roverImage.setImageResource(item.image!!)
             itemView.setOnClickListener { clickListener(item) }
         }
     }

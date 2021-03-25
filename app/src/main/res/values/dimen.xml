@@ -23,6 +23,10 @@
     <!-- Rover Details -->
     <dimen name="rover_detail_button_height">64dp</dimen>
 
+    <!-- Mars Image Item -->
+    <dimen name="mars_image_height">200dp</dimen>
+    <dimen name="mars_image_name_height">44dp</dimen>
+
     <dimen name="no_elevation">0dp</dimen>
 
 

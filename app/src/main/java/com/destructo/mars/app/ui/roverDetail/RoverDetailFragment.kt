@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.destructo.mars.app.R
-import com.destructo.mars.app.data.model.Rover
 import com.destructo.mars.app.databinding.FragmentRoverDetailBinding
-import com.destructo.mars.app.util.ARG_ROVER
+import com.destructo.mars.app.util.ARG_ROVER_NAME
 
 class RoverDetailFragment : Fragment() {
 
@@ -28,6 +28,11 @@ class RoverDetailFragment : Fragment() {
         _binding = FragmentRoverDetailBinding.inflate(inflater, container, false)
         toolbar = binding.toolbar
         bindDataToViews()
+
+        binding.buttonSeeImages.setOnClickListener {
+            navigateToMarsImageFragment()
+        }
+
         return binding.root
     }
 
@@ -46,12 +51,19 @@ class RoverDetailFragment : Fragment() {
     }
 
     private fun bindDataToViews() {
-        binding.roverDetailImage.setImageResource(args.argRover.image)
+        binding.roverDetailImage.setImageResource(args.argRover.image!!)
         binding.roverDetailName.text = args.argRover.name
-        binding.roverDetailLandedOn.text = args.argRover.landedOn
-        binding.roverDetailLaunchedOn.text = args.argRover.launchedOn
+        binding.roverDetailLandedOn.text = args.argRover.landingDate
+        binding.roverDetailLaunchedOn.text = args.argRover.launchDate
         binding.roverDetailMainJob.text = args.argRover.mainJob
         binding.missionName.text = args.argRover.missionName
+    }
+
+    private fun navigateToMarsImageFragment(){
+        findNavController().navigate(
+            R.id.marsImageFragment,
+            bundleOf(Pair(ARG_ROVER_NAME, args.argRover.name)
+            ))
     }
 
 }
