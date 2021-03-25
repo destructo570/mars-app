@@ -21,5 +21,5 @@ class MarsRepository @Inject constructor(
             marsImage.value = Resource.error(error.message ?: GENERIC_ERROR, null)
         }
     }
-    
+
 }

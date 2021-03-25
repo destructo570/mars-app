@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.destructo.mars.app.R
 import com.destructo.mars.app.data.datasource.RoversList
-import com.destructo.mars.app.data.model.common.Rover
+import com.destructo.mars.app.data.model.common.RoverResponse
+import com.destructo.mars.app.data.model.rover.Rover
 import com.destructo.mars.app.databinding.FragmentRoverListBinding
 import com.destructo.mars.app.util.ARG_ROVER
 import com.destructo.mars.app.util.LIST_ITEM_SPACING

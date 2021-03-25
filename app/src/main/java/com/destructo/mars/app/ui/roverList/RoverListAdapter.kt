@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.destructo.mars.app.R
-import com.destructo.mars.app.data.model.common.Rover
+import com.destructo.mars.app.data.model.rover.Rover
 
 class RoverListAdapter(private val clickListener: (Rover) -> Unit): ListAdapter<Rover, RoverListAdapter.ViewHolder>(RoverDiffUtilCallback()) {
 

@@ -3,7 +3,7 @@ package com.destructo.mars.app.data.model.common
 
 import com.squareup.moshi.Json
 
-data class Camera(
+data class CameraResponse(
     @Json(name = "full_name")
     val fullName: String?=null,
     @Json(name = "id")

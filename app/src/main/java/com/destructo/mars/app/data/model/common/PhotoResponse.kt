@@ -1,13 +1,11 @@
 package com.destructo.mars.app.data.model.common
 
 
-import com.destructo.mars.app.data.model.common.Camera
-import com.destructo.mars.app.data.model.common.Rover
 import com.squareup.moshi.Json
 
-data class Photo(
+data class PhotoResponse(
     @Json(name = "camera")
-    val camera: Camera?=null,
+    val camera: CameraResponse?=null,
     @Json(name = "earth_date")
     val earthDate: String?=null,
     @Json(name = "id")
@@ -15,7 +13,7 @@ data class Photo(
     @Json(name = "img_src")
     val imgSrc: String?=null,
     @Json(name = "rover")
-    val rover: Rover?=null,
+    val rover: RoverResponse?=null,
     @Json(name = "sol")
     val sol: Int?=null
 )
