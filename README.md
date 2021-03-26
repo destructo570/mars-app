@@ -12,28 +12,28 @@ You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
 
 ## Project Structure
 
-• Data
+* Data
     This is where network datasource, repository and model classes for responses live.
-• DI
+* DI
     Dependency injection related code is in this package.
-• UI
+* UI
     This is where presentation layer logic is.There are different packages separating different sections of the app. All the ui/view related code goes here.
-• Utils
+* Utils
     Contains all the constants and some other utility classes the app needs.
 
 ## Libraries Used
-* • Hilt - dependency injection
-* • Retrofit - networking
-* • Navigation Components 
-* • Kotlin coroutines - performing backgroundd tasks
-* • Coil - image loading
-* • Moshi - JSON parsing
-* • ViewBinding - find and reference views more easily
-* • Material - material components
-* • [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - manage ui related data and buisiness logic
+* Hilt - dependency injection
+* [Retrofit2](https://square.github.io/retrofit/) - networking
+* Navigation Components 
+* [Kotlin coroutines](https://github.com/Kotlin/kotlinx.coroutines#user-content-android) - performing backgroundd tasks
+* [Coil](https://github.com/coil-kt/coil) - image loading
+* [Moshi](https://github.com/square/moshi) - JSON parsing
+* [ViewBinding](https://developer.android.com/topic/libraries/view-binding) - find and reference views more easily
+* [Material](https://material.io/develop/android/docs/getting-started/) - material components
+* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - manage ui related data and buisiness logic
 
 ## ToDo
-• Add tests
-• Add Animations
-• Add some more features
+* Add tests
+* Add Animations
+* Add some more features
 
