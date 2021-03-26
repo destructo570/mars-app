@@ -10,6 +10,9 @@ Ex. const val API_KEY = "YOUR_API_KEY_HERE"
 
 You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
 
+## Screenshots
+
+
 ## Project Structure
 
 * Data
