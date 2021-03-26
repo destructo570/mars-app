@@ -25,9 +25,9 @@ You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
     Contains all the constants and some other utility classes the app needs.
 
 ## Libraries Used
-* Hilt - dependency injection
+* Dagger-Hilt - dependency injection
+* * Navigation Components - simplify navigation related login in the app
 * [Retrofit2](https://square.github.io/retrofit/) - networking
-* Navigation Components 
 * [Kotlin coroutines](https://github.com/Kotlin/kotlinx.coroutines#user-content-android) - performing backgroundd tasks
 * [Coil](https://github.com/coil-kt/coil) - image loading
 * [Moshi](https://github.com/square/moshi) - JSON parsing
