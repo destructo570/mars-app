@@ -4,7 +4,7 @@ A simple app that lets you browse latest images taken by various Mars rovers tha
 This app is based on MVVM architexture. And I also used architecture components like navigation components, LiveData, ViewModel
 
 ## How to use the code
-Make sure to create a config.kt file and define a constant API_KEY which will be used to make make calls to the NASA API
+Make sure to create a config.kt file and define a constant API_KEY which will be used to make calls to the NASA API
 
 Ex. const val API_KEY = "YOUR_API_KEY_HERE"
 
