@@ -22,15 +22,15 @@ You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
     Contains all the constants and some other utility classes the app needs.
 
 ## Libraries Used
-*• Hilt - dependency injection
-*• Retrofit - networking
-*• Navigation Components 
-*• Kotlin coroutines - performing backgroundd tasks
-*• Coil - image loading
-*• Moshi - JSON parsing
-*• ViewBinding - find and reference views more easily
-*• Material - material components
-*• [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - manage ui related data and buisiness logic
+* • Hilt - dependency injection
+* • Retrofit - networking
+* • Navigation Components 
+* • Kotlin coroutines - performing backgroundd tasks
+* • Coil - image loading
+* • Moshi - JSON parsing
+* • ViewBinding - find and reference views more easily
+* • Material - material components
+* • [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - manage ui related data and buisiness logic
 
 ## ToDo
 • Add tests
