@@ -16,17 +16,17 @@ You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
 ## Project Structure
 
 * Data
-    This is where network datasource, repository and model classes for responses live.
+   * This is where network datasource, repository and model classes for responses live.
 * DI
-    Dependency injection related code is in this package.
+   * Dependency injection related code is in this package.
 * UI
-    This is where presentation layer logic is.There are different packages separating different sections of the app. All the ui/view related code goes here.
+   * This is where presentation layer logic is.There are different packages separating different sections of the app. All the ui/view related code goes here.
 * Utils
-    Contains all the constants and some other utility classes the app needs.
+   * Contains all the constants and some other utility classes the app needs.
 
 ## Libraries Used
 * Dagger-Hilt - dependency injection
-* * Navigation Components - simplify navigation related login in the app
+* Navigation Components - simplify navigation related login in the app
 * [Retrofit2](https://square.github.io/retrofit/) - networking
 * [Kotlin coroutines](https://github.com/Kotlin/kotlinx.coroutines#user-content-android) - performing backgroundd tasks
 * [Coil](https://github.com/coil-kt/coil) - image loading
