@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.destructo.mars.app.data.datasource.Status
 import com.destructo.mars.app.databinding.FragmentMarsImageBinding
+import com.destructo.mars.app.listener.ListEndListener
 import com.destructo.mars.app.util.GridSpacingItemDeco
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -33,6 +34,7 @@ class MarsImageFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null){
+            viewModel.deleteAllImages()
             viewModel.getMarsImagesByRoverName(args.roverName)
         }
     }
@@ -52,8 +54,15 @@ class MarsImageFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         setupToolbar()
         marsImageAdapter = MarsImageAdapter {}
+        marsImageAdapter.setListEndListener(object : ListEndListener{
+            override fun onEndReached(position: Int) {
+                viewModel.getMarsImagesByRoverName(args.roverName)
+            }
+        })
+
         imageRecycler.adapter = marsImageAdapter
 
         viewModel.marsImages.observe(viewLifecycleOwner){ resource ->
@@ -63,13 +72,16 @@ class MarsImageFragment : Fragment() {
                 }
                 Status.SUCCESS ->{
                     progressbar.visibility = View.GONE
-                    marsImageAdapter.submitList(resource.data?.photos)
                 }
                 Status.ERROR ->{
                     progressbar.visibility = View.GONE
                     Toast.makeText(context, "${resource.message}", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+
+        viewModel.allMarsImages.observe(viewLifecycleOwner){
+            marsImageAdapter.submitList(it)
         }
     }
 

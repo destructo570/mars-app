@@ -12,10 +12,13 @@ class MarsImageViewModel @Inject constructor(
     private val repository: MarsRepository
 ): ViewModel(){
 
-    val marsImages = repository.marsImage
+    val allMarsImages = repository.getAllImages
+
+    val marsImages = repository.marsImageList
 
     fun getMarsImagesByRoverName(rover: String) =
         viewModelScope.launch{ repository.getLatestMarsImagesByRover(rover) }
 
+    fun deleteAllImages() = repository.clearList()
 
 }

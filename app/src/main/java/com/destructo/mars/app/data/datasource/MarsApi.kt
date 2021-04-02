@@ -1,6 +1,7 @@
 package com.destructo.mars.app.data.datasource
 
 import com.destructo.mars.app.data.model.latestImages.LatestImages
+import com.destructo.mars.app.data.model.marsImages.MarsImages
 import com.destructo.mars.app.util.API_KEY
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -17,4 +18,11 @@ interface MarsApi {
         @Path("rover_name") roverName: String,
         @Query("api_key") apiKey: String = API_KEY,
     ): LatestImages
+
+    @GET("rovers/{rover_name}/photos")
+    suspend fun getMarsImageBySol(
+        @Path("rover_name") roverName: String,
+        @Query("sol") sol: String,
+        @Query("api_key") apiKey: String = API_KEY,
+    ): MarsImages
 }
