@@ -22,7 +22,8 @@ interface MarsApi {
     @GET("rovers/{rover_name}/photos")
     suspend fun getMarsImageBySol(
         @Path("rover_name") roverName: String,
-        @Query("sol") sol: String,
+        @Query("sol") sol: String="1",
+        @Query("page") page: String,
         @Query("api_key") apiKey: String = API_KEY,
     ): MarsImages
 }

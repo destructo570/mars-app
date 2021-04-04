@@ -26,8 +26,7 @@ class MarsRepository @Inject constructor(
     suspend fun getLatestMarsImagesByRover(rover: String) {
         marsImageList.value = Resource.loading(null)
         try {
-            val response = marsApi.getMarsImageBySol(roverName = rover, sol = nextSol.toString())
-
+            val response = marsApi.getMarsImageBySol(roverName = rover, page = nextSol.toString())
             marsImageListDao.insertImageList(response.photos)
             marsImageList.value = Resource.success(response)
             nextSol++
