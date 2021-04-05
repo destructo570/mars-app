@@ -1,13 +1,9 @@
 package com.destructo.mars.app.ui.marsImageList
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.destructo.mars.app.data.model.common.PhotoResponse
-import com.destructo.mars.app.databinding.ListItemMarsImageBinding
 import com.destructo.mars.app.listener.ListEndListener
 
 class MarsImageAdapter (
