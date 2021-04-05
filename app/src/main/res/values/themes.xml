@@ -6,7 +6,9 @@
         <item name="colorPrimaryVariant">@color/color_primary_dark</item>
         <item name="colorOnPrimary">@color/black</item>
         <item name="colorAccentSecondary">@color/color_accent</item>
+        <item name="colorButtonSecondary">@color/color_button_secondary</item>
         <item name="textColorPrimary">@color/text_color_primary</item>
+        <item name="textColorSecondary">@color/text_color_secondary</item>
         <item name="textColorOnPrimary">@color/text_color_onPrimary</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>

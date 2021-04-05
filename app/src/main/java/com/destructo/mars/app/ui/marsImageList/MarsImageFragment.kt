@@ -18,9 +18,10 @@ import com.destructo.mars.app.databinding.FragmentMarsImageBinding
 import com.destructo.mars.app.listener.ListEndListener
 import com.destructo.mars.app.util.GridSpacingItemDeco
 import dagger.hilt.android.AndroidEntryPoint
+import com.destructo.mars.app.ui.marsImageList.ImagesFilterBottomSheet as ImagesFilterBottomSheet1
 
 @AndroidEntryPoint
-class MarsImageFragment : Fragment() {
+class MarsImageFragment : Fragment(), ImagesFilterBottomSheet1.ImageFilterListener {
 
     private var _binding: FragmentMarsImageBinding? = null
     private val binding get() = _binding!!
@@ -35,7 +36,7 @@ class MarsImageFragment : Fragment() {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null){
             viewModel.deleteAllImages()
-            viewModel.getMarsImagesByRoverName(args.roverName)
+            viewModel.setCurrentMartianSol(0)
         }
     }
 
@@ -44,11 +45,17 @@ class MarsImageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMarsImageBinding.inflate(inflater, container, false)
+
         toolbar = binding.toolbar
         progressbar = binding.progressbar
         imageRecycler = binding.marsImageRecycler
         imageRecycler.layoutManager = GridLayoutManager(context, 2)
         imageRecycler.addItemDecoration(GridSpacingItemDeco(2, 25, true))
+
+        binding.fabFilter.setOnClickListener {
+            ImagesFilterBottomSheet1.newInstance(viewModel.currentSol.value.toString())
+                .show(childFragmentManager, "filter_bottom_sheet")
+        }
 
         return binding.root
     }
@@ -80,6 +87,10 @@ class MarsImageFragment : Fragment() {
             }
         }
 
+        viewModel.currentSol.observe(viewLifecycleOwner){
+            viewModel.getMarsImagesByRoverName(args.roverName)
+        }
+
         viewModel.allMarsImages.observe(viewLifecycleOwner){
             marsImageAdapter.submitList(it)
         }
@@ -94,4 +105,11 @@ class MarsImageFragment : Fragment() {
     private fun setupToolbar(){
         toolbar.setNavigationOnClickListener { findNavController().navigateUp() }
     }
+
+    override fun onClick(martianSol: String) {
+        viewModel.deleteAllImages()
+        viewModel.clearNextSol()
+        viewModel.setCurrentMartianSol(martianSol.toInt())
+    }
+
 }

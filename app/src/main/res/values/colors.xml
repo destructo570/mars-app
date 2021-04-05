@@ -13,6 +13,11 @@
     <color name="text_color_onPrimary">#FFFFFF</color>
     <color name="text_color_primary_night">#FFFFFF</color>
     <color name="text_color_onPrimary_night">#000000</color>
+    <color name="text_color_secondary">#b3b1b1</color>
+    <color name="text_color_secondary_night">#cccbcb</color>
 
     <color name="transparent_black">#BF000000</color>
+    <color name="color_button_secondary">#e5e5e5</color>
+    <color name="color_button_secondary_night">#ffffff</color>
+
 </resources>

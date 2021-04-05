@@ -18,5 +18,11 @@
     <string name="dummy_launched_on">July 30, 2020</string>
     <string name="dummy_landed_on">Feb, 18, 2021</string>
     <string name="dummy_main_job">Seek signs of ancient life and collect samples of rock and regolith (broken rock and soil) for possible return to Earth.</string>
+    <string name="decrement">-</string>
+    <string name="increment">+</string>
+    <string name="initial_sol">0</string>
+    <string name="martian_sol">Martian Sol</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="filter_options_action_button">Filter options action button</string>
 
 </resources>

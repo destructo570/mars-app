@@ -21,12 +21,16 @@ class MarsRepository @Inject constructor(
 
     val marsImageList = MutableLiveData<Resource<MarsImages>>()
 
-    private var nextSol:Int = 0
+    private var nextSol: Int = 0
 
-    suspend fun getLatestMarsImagesByRover(rover: String) {
+    suspend fun getLatestMarsImagesByRover(rover: String, sol: String) {
         marsImageList.value = Resource.loading(null)
         try {
-            val response = marsApi.getMarsImageBySol(roverName = rover, page = nextSol.toString())
+            val response = marsApi.getMarsImageBySol(
+                roverName = rover,
+                page = nextSol.toString(),
+                sol = sol
+            )
             marsImageListDao.insertImageList(response.photos)
             marsImageList.value = Resource.success(response)
             nextSol++
@@ -37,5 +41,9 @@ class MarsRepository @Inject constructor(
     }
 
     fun clearList() = marsImageListDao.deleteAllImages()
+
+    fun clearNextSol() {
+        nextSol = 0
+    }
 
 }
