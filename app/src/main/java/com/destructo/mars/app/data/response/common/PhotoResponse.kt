@@ -1,10 +1,7 @@
 package com.destructo.mars.app.data.response.common
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.destructo.mars.app.data.domainModel.DomainMapper
 import com.destructo.mars.app.data.domainModel.PhotoModel
-import com.destructo.mars.app.util.CACHE_EXPIRE
 import com.destructo.mars.app.util.UNDEFINED
 import com.squareup.moshi.Json
 
