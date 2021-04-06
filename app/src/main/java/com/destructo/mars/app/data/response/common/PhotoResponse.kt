@@ -1,6 +1,5 @@
 package com.destructo.mars.app.data.response.common
 
-
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.destructo.mars.app.data.domainModel.DomainMapper
@@ -25,8 +24,8 @@ data class PhotoResponse(
 ): DomainMapper<PhotoModel>{
 
     override fun mapToDomainModel(): PhotoModel {
-        return PhotoModel(camera = camera, rover = rover, earthDate = earthDate ?: UNDEFINED,
-            imgSrc = imgSrc ?: UNDEFINED , sol = sol ?: 0)
+        return PhotoModel(photoId = id ?: 0, sol = sol ?: 0, camera = camera, rover = rover,
+            earthDate = earthDate ?: UNDEFINED, imgSrc = imgSrc ?: UNDEFINED)
     }
 
 }

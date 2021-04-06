@@ -12,6 +12,7 @@ import com.squareup.moshi.Json
 data class PhotoModel(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+    val photoId: Int,
     val camera: CameraResponse?,
     val earthDate: String,
     val imgSrc: String,
@@ -27,7 +28,7 @@ data class PhotoModel(
     override fun mapToDomainModel(): PhotoResponse {
         return PhotoResponse(
             camera = camera, rover = rover, earthDate = earthDate,
-            imgSrc = imgSrc, sol = sol
+            imgSrc = imgSrc, sol = sol, id = photoId
         )
     }
 }
