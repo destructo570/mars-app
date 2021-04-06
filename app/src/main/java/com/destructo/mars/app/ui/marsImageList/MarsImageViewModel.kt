@@ -29,7 +29,7 @@ class MarsImageViewModel @Inject constructor(
 
     fun deleteAllImages() = repository.clearList()
 
-    fun clearNextSol() = repository.clearNextSol()
+    fun clearNextSol() = repository.clearNextPage()
 
     fun setCurrentMartianSol(sol: Int) {
         _currentSol.value = sol
