@@ -1,7 +1,7 @@
 package com.destructo.mars.app.data.datasource
 
-import com.destructo.mars.app.data.model.latestImages.LatestImages
-import com.destructo.mars.app.data.model.marsImages.MarsImages
+import com.destructo.mars.app.data.response.latestImages.LatestImages
+import com.destructo.mars.app.data.response.marsImages.MarsImages
 import com.destructo.mars.app.util.API_KEY
 import retrofit2.http.GET
 import retrofit2.http.Path

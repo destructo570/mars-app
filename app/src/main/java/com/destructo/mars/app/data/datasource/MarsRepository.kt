@@ -1,14 +1,9 @@
 package com.destructo.mars.app.data.datasource
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.destructo.mars.app.data.model.common.PhotoResponse
-import com.destructo.mars.app.data.model.latestImages.LatestImages
-import com.destructo.mars.app.data.model.marsImages.MarsImages
+import com.destructo.mars.app.data.response.marsImages.MarsImages
 import com.destructo.mars.app.room.MarsImageListDao
 import com.destructo.mars.app.util.GENERIC_ERROR
-import retrofit2.Response
-import timber.log.Timber
 import java.lang.Exception
 import javax.inject.Inject
 
@@ -31,7 +26,7 @@ class MarsRepository @Inject constructor(
                 page = nextSol.toString(),
                 sol = sol
             )
-            marsImageListDao.insertImageList(response.photos)
+            marsImageListDao.insertImageList(response.photos?.map {it.mapToDomainModel()})
             marsImageList.value = Resource.success(response)
             nextSol++
 

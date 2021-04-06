@@ -3,12 +3,13 @@ package com.destructo.mars.app.ui.marsImageList
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.destructo.mars.app.data.model.common.PhotoResponse
+import com.destructo.mars.app.data.domainModel.PhotoModel
+import com.destructo.mars.app.data.response.common.PhotoResponse
 import com.destructo.mars.app.listener.ListEndListener
 
 class MarsImageAdapter (
-    private val latestPhotoListener: (PhotoResponse) -> Unit):
-    ListAdapter<PhotoResponse, MarsImageViewHolder>(LatestPhotoDiffCallback()) {
+    private val latestPhotoListener: (PhotoModel) -> Unit):
+    ListAdapter<PhotoModel, MarsImageViewHolder>(LatestPhotoDiffCallback()) {
 
     private var listEndListener: ListEndListener? = null
 
@@ -33,12 +34,12 @@ class MarsImageAdapter (
 
 }
 
-class LatestPhotoDiffCallback : DiffUtil.ItemCallback<PhotoResponse>() {
-    override fun areItemsTheSame(oldItem: PhotoResponse, newItem: PhotoResponse): Boolean {
+class LatestPhotoDiffCallback : DiffUtil.ItemCallback<PhotoModel>() {
+    override fun areItemsTheSame(oldItem: PhotoModel, newItem: PhotoModel): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: PhotoResponse, newItem: PhotoResponse): Boolean {
+    override fun areContentsTheSame(oldItem: PhotoModel, newItem: PhotoModel): Boolean {
         return oldItem == newItem
     }
 

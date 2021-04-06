@@ -1,4 +1,4 @@
-package com.destructo.mars.app.data.model.common
+package com.destructo.mars.app.data.response.common
 
 
 import com.squareup.moshi.Json

@@ -1,7 +1,6 @@
-package com.destructo.mars.app.data.model.rover
+package com.destructo.mars.app.data.response.rover
 
 import android.os.Parcelable
-import com.squareup.moshi.Json
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

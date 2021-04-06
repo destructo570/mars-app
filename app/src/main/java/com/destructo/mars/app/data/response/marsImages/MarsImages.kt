@@ -1,7 +1,7 @@
-package com.destructo.mars.app.data.model.marsImages
+package com.destructo.mars.app.data.response.marsImages
 
 
-import com.destructo.mars.app.data.model.common.PhotoResponse
+import com.destructo.mars.app.data.response.common.PhotoResponse
 import com.squareup.moshi.Json
 
 data class MarsImages(

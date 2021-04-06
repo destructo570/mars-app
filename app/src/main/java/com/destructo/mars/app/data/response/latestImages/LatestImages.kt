@@ -1,7 +1,7 @@
-package com.destructo.mars.app.data.model.latestImages
+package com.destructo.mars.app.data.response.latestImages
 
 
-import com.destructo.mars.app.data.model.common.PhotoResponse
+import com.destructo.mars.app.data.response.common.PhotoResponse
 import com.squareup.moshi.Json
 
 data class LatestImages(

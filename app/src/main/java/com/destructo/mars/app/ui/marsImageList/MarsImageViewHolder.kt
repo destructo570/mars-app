@@ -4,17 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.destructo.mars.app.data.model.common.PhotoResponse
+import com.destructo.mars.app.data.domainModel.PhotoModel
+import com.destructo.mars.app.data.response.common.PhotoResponse
 import com.destructo.mars.app.databinding.ListItemMarsImageBinding
 
 class MarsImageViewHolder(
     private val binding: ListItemMarsImageBinding,
-    private val latestPhotoListener: (PhotoResponse) -> Unit,
+    private val latestPhotoListener: (PhotoModel) -> Unit,
 ): RecyclerView.ViewHolder(binding.root) {
 
     companion object {
         fun from(parent: ViewGroup,
-                 latestPhotoListener:(PhotoResponse) -> Unit
+                 latestPhotoListener:(PhotoModel) -> Unit
         ): MarsImageViewHolder {
             val binding = ListItemMarsImageBinding.inflate(
                 LayoutInflater
@@ -27,7 +28,7 @@ class MarsImageViewHolder(
         }
     }
 
-    fun bind(latestPhoto: PhotoResponse) {
+    fun bind(latestPhoto: PhotoModel) {
         binding.apply {
             marsImage
                 .load(latestPhoto.imgSrc) {

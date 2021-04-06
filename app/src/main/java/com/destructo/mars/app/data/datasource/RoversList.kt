@@ -1,7 +1,7 @@
 package com.destructo.mars.app.data.datasource
 
 import com.destructo.mars.app.R
-import com.destructo.mars.app.data.model.rover.Rover
+import com.destructo.mars.app.data.response.rover.Rover
 
 object RoversList {
 

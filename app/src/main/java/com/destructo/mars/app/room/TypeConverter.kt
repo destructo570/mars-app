@@ -1,9 +1,8 @@
 package com.destructo.mars.app.room
 
 import androidx.room.TypeConverter
-import com.destructo.mars.app.data.model.common.CameraResponse
-import com.destructo.mars.app.data.model.common.RoverResponse
-import com.destructo.mars.app.data.model.rover.Rover
+import com.destructo.mars.app.data.response.common.CameraResponse
+import com.destructo.mars.app.data.response.common.RoverResponse
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
