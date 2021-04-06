@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.destructo.mars.app.data.datasource.MarsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -18,12 +19,12 @@ class MarsImageViewModel @Inject constructor(
 
     val marsImages = repository.marsImageList
 
-    private val _currentSol = MutableLiveData(0)
+    private val _currentSol = MutableLiveData<Int>()
     val currentSol: LiveData<Int>
     get() = _currentSol
 
     fun getMarsImagesByRoverName(rover: String) =
-        viewModelScope.launch{
+        viewModelScope.launch(Dispatchers.IO){
             repository.getLatestMarsImagesByRover(rover, _currentSol.value.toString())
         }
 

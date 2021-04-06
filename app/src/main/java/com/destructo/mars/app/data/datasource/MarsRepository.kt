@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import com.destructo.mars.app.data.response.marsImages.MarsImages
 import com.destructo.mars.app.room.MarsImageListDao
 import com.destructo.mars.app.util.GENERIC_ERROR
-import java.lang.Exception
 import javax.inject.Inject
 
 class MarsRepository @Inject constructor(
@@ -19,19 +18,23 @@ class MarsRepository @Inject constructor(
     private var nextPage: Int = 1
 
     suspend fun getLatestMarsImagesByRover(rover: String, sol: String) {
-        marsImageList.value = Resource.loading(null)
+        marsImageList.postValue(Resource.loading(null))
+
         try {
             val response = marsApi.getMarsImageBySol(
                 roverName = rover,
                 page = nextPage.toString(),
                 sol = sol
             )
+
             marsImageListDao.insertImageList(response.photos?.map {it.mapToDomainModel()})
-            marsImageList.value = Resource.success(response)
+            marsImageList.postValue(Resource.success(response))
             nextPage++
 
         } catch (error: Exception) {
-            marsImageList.value = Resource.error(error.message ?: GENERIC_ERROR, null)
+            marsImageList.postValue(
+                Resource.error(error.message ?: GENERIC_ERROR, null)
+            )
         }
     }
 
