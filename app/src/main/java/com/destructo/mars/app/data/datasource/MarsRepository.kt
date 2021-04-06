@@ -38,7 +38,7 @@ class MarsRepository @Inject constructor(
     fun clearList() = marsImageListDao.deleteAllImages()
 
     fun clearNextPage() {
-        nextPage = 0
+        nextPage = 1
     }
 
 }
