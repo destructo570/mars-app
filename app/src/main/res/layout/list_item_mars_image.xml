@@ -42,11 +42,11 @@
                 >
                 <TextView
                     android:id="@+id/rover_name"
-                    android:textAppearance="@style/TextAppearance.Mars.H1"
+                    android:textAppearance="@style/TextAppearance.Mars.B1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingStart="@dimen/padding_normal"
-                    android:paddingEnd="@dimen/padding_normal"
+                    android:paddingStart="@dimen/padding_small"
+                    android:paddingEnd="@dimen/padding_small"
                     android:textColor="@color/white"
                     tools:text="CURIOSITY"
                     android:gravity="center_vertical"
