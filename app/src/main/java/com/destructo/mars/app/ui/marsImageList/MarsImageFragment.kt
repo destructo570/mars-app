@@ -26,14 +26,6 @@ class MarsImageFragment : Fragment(), ImagesFilterBottomSheet1.ImageFilterListen
     private val viewModel: MarsImageViewModel by viewModels()
     private lateinit var marsImageAdapter: MarsImageAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (savedInstanceState == null){
-            viewModel.deleteAllImages()
-            viewModel.setCurrentMartianSol(0)
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

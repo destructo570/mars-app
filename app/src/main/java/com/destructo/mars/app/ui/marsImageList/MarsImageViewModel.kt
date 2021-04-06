@@ -23,6 +23,11 @@ class MarsImageViewModel @Inject constructor(
     val currentSol: LiveData<Int>
     get() = _currentSol
 
+    init {
+        deleteAllImages()
+        setCurrentMartianSol(0)
+    }
+
     fun getMarsImagesByRoverName(rover: String) =
         viewModelScope.launch(Dispatchers.IO){
             repository.getLatestMarsImagesByRover(rover, _currentSol.value.toString())
