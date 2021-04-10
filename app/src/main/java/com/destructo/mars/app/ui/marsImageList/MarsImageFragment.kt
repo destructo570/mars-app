@@ -5,14 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
+import com.destructo.mars.app.R
 import com.destructo.mars.app.data.datasource.Status
+import com.destructo.mars.app.data.domainModel.PhotoModel
 import com.destructo.mars.app.databinding.FragmentMarsImageBinding
 import com.destructo.mars.app.listener.ListEndListener
+import com.destructo.mars.app.util.ARG_IMG_DETAIL
 import com.destructo.mars.app.util.GridSpacingItemDeco
 import com.destructo.mars.app.util.hide
 import com.destructo.mars.app.util.show
@@ -50,7 +54,10 @@ class MarsImageFragment : Fragment(), ImagesFilterBottomSheet1.ImageFilterListen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         setupToolbar()
-        marsImageAdapter = MarsImageAdapter {}
+        marsImageAdapter = MarsImageAdapter {
+            navigateToImageDetails(it)
+        }
+
         marsImageAdapter.setListEndListener(object : ListEndListener{
             override fun onEndReached(position: Int) {
                 viewModel.getMarsImagesByRoverName(args.roverName)
@@ -91,6 +98,10 @@ class MarsImageFragment : Fragment(), ImagesFilterBottomSheet1.ImageFilterListen
 
     private fun setupToolbar(){
         binding.toolbar.setNavigationOnClickListener { findNavController().navigateUp() }
+    }
+
+    private fun navigateToImageDetails(data: PhotoModel){
+        findNavController().navigate(R.id.imageDetailFragment, bundleOf(Pair(ARG_IMG_DETAIL, data)))
     }
 
     override fun onClick(martianSol: String) {

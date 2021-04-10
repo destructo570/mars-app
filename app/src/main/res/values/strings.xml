@@ -24,5 +24,10 @@
     <string name="martian_sol">Martian Sol</string>
     <string name="apply_filter">Apply Filter</string>
     <string name="filter_options_action_button">Filter options action button</string>
+    <string name="detail_rover">Rover:\u0020</string>
+    <string name="detail_date">Date:\u0020</string>
+    <string name="detail_camera">Camera:\u0020</string>
+    <string name="detail_martian_sol">Martian Sol:\u0020</string>
+
 
 </resources>

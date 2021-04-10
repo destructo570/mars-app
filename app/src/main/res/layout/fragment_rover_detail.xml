@@ -46,7 +46,7 @@
 
             <TextView
                 android:id="@+id/textView"
-                style="@style/TextAppearance.Mars.H3"
+                style="@style/TextAppearance.Mars.H2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
@@ -70,7 +70,7 @@
 
             <TextView
                 android:id="@+id/textView3"
-                style="@style/TextAppearance.Mars.H3"
+                style="@style/TextAppearance.Mars.H2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
@@ -93,7 +93,7 @@
 
             <TextView
                 android:id="@+id/textView5"
-                style="@style/TextAppearance.Mars.H3"
+                style="@style/TextAppearance.Mars.H2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
@@ -116,7 +116,7 @@
 
             <TextView
                 android:id="@+id/textView7"
-                style="@style/TextAppearance.Mars.H3"
+                style="@style/TextAppearance.Mars.H2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
@@ -139,7 +139,7 @@
 
             <TextView
                 android:id="@+id/textView9"
-                style="@style/TextAppearance.Mars.H3"
+                style="@style/TextAppearance.Mars.H2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
@@ -169,7 +169,7 @@
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginTop="@dimen/margin_normal"
                 android:layout_marginEnd="@dimen/margin_normal"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="@dimen/margin_normal"
                 android:text="@string/see_images"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

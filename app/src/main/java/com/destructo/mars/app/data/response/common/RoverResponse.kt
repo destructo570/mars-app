@@ -1,7 +1,10 @@
 package com.destructo.mars.app.data.response.common
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class RoverResponse(
         @Json(name = "id")
         val id: Int? = null,
@@ -13,4 +16,4 @@ data class RoverResponse(
         val landingDate: String? = null,
         @Json(name = "launch_date")
         val launchDate: String? = null,
-)
+): Parcelable

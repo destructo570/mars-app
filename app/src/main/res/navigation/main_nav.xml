@@ -28,4 +28,14 @@
             android:name="rover_name"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/imageDetailFragment"
+        android:name="com.destructo.mars.app.ui.marsImageDetail.ImageDetailFragment"
+        android:label="fragment_image_detail"
+        tools:layout="@layout/fragment_image_detail" >
+        <argument
+            android:name="image_detail"
+            app:argType="com.destructo.mars.app.data.domainModel.PhotoModel" />
+    </fragment>
+
 </navigation>
