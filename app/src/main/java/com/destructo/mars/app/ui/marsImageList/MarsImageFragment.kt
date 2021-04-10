@@ -14,6 +14,8 @@ import com.destructo.mars.app.data.datasource.Status
 import com.destructo.mars.app.databinding.FragmentMarsImageBinding
 import com.destructo.mars.app.listener.ListEndListener
 import com.destructo.mars.app.util.GridSpacingItemDeco
+import com.destructo.mars.app.util.hide
+import com.destructo.mars.app.util.show
 import dagger.hilt.android.AndroidEntryPoint
 import com.destructo.mars.app.ui.marsImageList.ImagesFilterBottomSheet as ImagesFilterBottomSheet1
 
@@ -60,13 +62,13 @@ class MarsImageFragment : Fragment(), ImagesFilterBottomSheet1.ImageFilterListen
         viewModel.marsImages.observe(viewLifecycleOwner){ resource ->
             when(resource.status){
                 Status.LOADING ->{
-                    binding.progressbar.visibility = View.VISIBLE
+                    binding.progressbar.show()
                 }
                 Status.SUCCESS ->{
-                    binding.progressbar.visibility = View.GONE
+                    binding.progressbar.hide()
                 }
                 Status.ERROR ->{
-                    binding.progressbar.visibility = View.GONE
+                    binding.progressbar.hide()
                     Toast.makeText(context, "${resource.message}", Toast.LENGTH_SHORT).show()
                 }
             }
