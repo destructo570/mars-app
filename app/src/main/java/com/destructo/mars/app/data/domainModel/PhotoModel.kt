@@ -23,7 +23,7 @@ data class PhotoModel(
     val saved_time: Long = System.currentTimeMillis()
 ) : DomainMapper<PhotoResponse>, Parcelable {
 
-    private fun isExpired(): Boolean {
+    fun isExpired(): Boolean {
         return (System.currentTimeMillis() - saved_time) > CACHE_EXPIRE
     }
 
