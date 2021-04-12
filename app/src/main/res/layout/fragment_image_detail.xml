@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
             android:layout_marginTop="@dimen/margin_normal"
-            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginBottom="32dp"
             android:text="@string/detail_camera"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,11 +79,10 @@
             style="@style/TextAppearance.Mars.B2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_normal"
-            tools:text="MAST_CAM"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toEndOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/img_detail_rover_name" />
+            tools:text="MAST_CAM" />
 
         <TextView
             android:id="@+id/textView13"
@@ -91,8 +90,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginBottom="32dp"
             android:text="@string/detail_martian_sol"
-            app:layout_constraintBaseline_toBaselineOf="@+id/img_detail_sol"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline4" />
 
         <TextView
