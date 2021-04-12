@@ -1,7 +1,9 @@
 ## Mars App
 A simple app that lets you browse latest images taken by various Mars rovers thanks to NASA's API
 
-This app is based on MVVM architexture. And I also used architecture components like navigation components, LiveData, ViewModel.
+This app is based on MVVM architecture. And I also used architecture components like navigation components, LiveData, ViewModel.
+
+Goal was to create a simple playground app that I can keep modifying and playing around with the latest available best practices and new API's and libraries for android.
 
 ## How to use the code
 Make sure to create a config.kt file and define a constant named API_KEY which will be used to make calls to the NASA API
