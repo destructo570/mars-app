@@ -6,12 +6,10 @@ import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.destructo.mars.app.databinding.ImagesFilterBottomsheetBinding
 import com.destructo.mars.app.util.ARG_MARTIAN_SOL
 import com.destructo.mars.app.util.toEditable
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import java.lang.ClassCastException
 
 class ImagesFilterBottomSheet: BottomSheetDialogFragment(){
 
@@ -51,14 +49,14 @@ class ImagesFilterBottomSheet: BottomSheetDialogFragment(){
 
         binding.buttonIncSol.setOnClickListener {
             val sol = binding.textMartianSol.text.toString().toInt()
-            if (binding.textMartianSol.text != null ){
+            if (binding.textMartianSol.text != null){
                 binding.textMartianSol.text = sol.plus(1).toString().toEditable()
             }
         }
 
         binding.buttonDecSol.setOnClickListener {
             val sol = binding.textMartianSol.text.toString().toInt()
-            if (binding.textMartianSol.text != null ){
+            if (binding.textMartianSol.text != null && sol != 0){
                 binding.textMartianSol.text = sol.minus(1).toString().toEditable()
             }
         }
