@@ -4,17 +4,19 @@ A simple app that lets you browse latest images taken by various Mars rovers tha
 This app is based on MVVM architexture. And I also used architecture components like navigation components, LiveData, ViewModel.
 
 ## How to use the code
-Make sure to create a config.kt file and define a constant API_KEY which will be used to make calls to the NASA API
+Make sure to create a config.kt file and define a constant named API_KEY which will be used to make calls to the NASA API
 
-Ex. const val API_KEY = "YOUR_API_KEY_HERE"
+#### Example:
+
+```const val API_KEY = "YOUR_API_KEY_HERE"```
 
 You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
 
 ## Screenshots
-
+<img src="https://imgur.com/yb04MaY.jpg" width=30%><img src="https://imgur.com/B6sML3A.jpg" width=30%>
+<img src="https://imgur.com/bPWZkah.jpg" width=30%><img src="https://imgur.com/oqBx6hn.jpg" width=30%>
 
 ## Project Structure
-
 * Data
    * This is where network datasource, repository and model classes for responses live.
 * DI
@@ -40,6 +42,8 @@ You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
 Thanks to NASA for their [Mars-Rover-Photos API](https://github.com/chrisccerami/mars-photo-api)
 
 ## ToDo
+* Recreate UI using jetpack compose
+* Use Flows instead of livedata
 * Add tests
 * Add Animations
 * Add some more features
