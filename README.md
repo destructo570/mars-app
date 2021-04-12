@@ -30,7 +30,7 @@ You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
 
 ## Libraries Used
 * Dagger-Hilt - dependency injection
-* Navigation Components - simplify navigation related login in the app
+* Navigation Components - simplify navigation related logic in the app
 * [Retrofit2](https://square.github.io/retrofit/) - networking
 * [Kotlin coroutines](https://github.com/Kotlin/kotlinx.coroutines#user-content-android) - performing backgroundd tasks
 * [Coil](https://github.com/coil-kt/coil) - image loading
