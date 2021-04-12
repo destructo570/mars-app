@@ -46,6 +46,7 @@ Thanks to NASA for their [Mars-Rover-Photos API](https://github.com/chrisccerami
 ## ToDo
 * Recreate UI using jetpack compose
 * Use Flows instead of livedata
+* Use Paging 3 for pagination
 * Add tests
 * Add Animations
 * Add some more features
