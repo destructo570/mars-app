@@ -15,8 +15,8 @@ Make sure to create a config.kt file and define a constant named API_KEY which w
 You can signup for a personal API KEY here (It's free) : https://api.nasa.gov/
 
 ## Screenshots
-<img src="https://imgur.com/yb04MaY.jpg" width=30%><img src="https://imgur.com/B6sML3A.jpg" width=30%>
-<img src="https://imgur.com/bPWZkah.jpg" width=30%><img src="https://imgur.com/oqBx6hn.jpg" width=30%>
+<img src="https://imgur.com/yb04MaY.jpg" width=24%><img src="https://imgur.com/B6sML3A.jpg" width=24%>
+<img src="https://imgur.com/bPWZkah.jpg" width=24%><img src="https://imgur.com/oqBx6hn.jpg" width=24%>
 
 ## Project Structure
 * Data
